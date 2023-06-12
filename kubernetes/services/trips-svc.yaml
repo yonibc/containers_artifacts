@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: trips-svc
-  namespace: team7
+  namespace: api
 spec:
   selector:
     app: trips
