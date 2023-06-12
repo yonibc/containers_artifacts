@@ -23,7 +23,7 @@ spec:
               secretKeyRef:
                 name: my-secret
                 key: SQL_USER
-          - name: SECRET_PASSWORD
+          - name: SQL_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: my-secret

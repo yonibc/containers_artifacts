@@ -13,7 +13,28 @@ spec:
         app: userjava
     spec:
       containers:
-      - name: userjava-container
-        image: userjava-image:latest
+      - name: userjava
+        image: my-image:latest
         ports:
         - containerPort: 80
+        env:
+          - name: SQL_USER
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: SQL_USER
+          - name: SQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: SQL_PASSWORD
+          - name: SQL_SERVER
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: SQL_SERVER
+          - name: SQL_DBNAME
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: SQL_DBNAME
