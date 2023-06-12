@@ -13,17 +13,15 @@ spec:
         app: tripviewer
     spec:
       containers:
-      - name: tripviewer-container
+      - name: tripviewer
         image: tripviewer-image:latest
         ports:
         - containerPort: 80
          env:
           - name: USERPROFILE_API_ENDPOINT
-            valueFrom:
-                key: xxx
+            value: userprofile-svc.svc.cluster.local:80
           - name: TRIPS_API_ENDPOINT
-            valueFrom:
-                key: xxxx
+            value: trips-svc.svc.cluster.local:80
           - name: BING_MAPS_KEY
             valueFrom:
               secretKeyRef:
