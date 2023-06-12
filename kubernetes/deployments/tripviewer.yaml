@@ -17,3 +17,19 @@ spec:
         image: tripviewer-image:latest
         ports:
         - containerPort: 80
+         env:
+          - name: USERPROFILE_API_ENDPOINT
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: USERPROFILE_API_ENDPOINT
+          - name: TRIPS_API_ENDPOINT
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: TRIPS_API_ENDPOINT
+          - name: BING_MAPS_KEY
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: BING_MAPS_KEY
