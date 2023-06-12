@@ -20,14 +20,10 @@ spec:
          env:
           - name: USERPROFILE_API_ENDPOINT
             valueFrom:
-              secretKeyRef:
-                name: my-secret
-                key: USERPROFILE_API_ENDPOINT
+                key: xxx
           - name: TRIPS_API_ENDPOINT
             valueFrom:
-              secretKeyRef:
-                name: my-secret
-                key: TRIPS_API_ENDPOINT
+                key: xxxx
           - name: BING_MAPS_KEY
             valueFrom:
               secretKeyRef:
