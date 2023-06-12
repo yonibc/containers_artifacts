@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tripviewer-deployment
+  namespace: team7
 spec:
   replicas: 1
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: tripviewer
-        image: tripviewer-image:latest
+        image: registryapf4650.azurecr.io/tripviewer:latest
         ports:
         - containerPort: 80
          env:

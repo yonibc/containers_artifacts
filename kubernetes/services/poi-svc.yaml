@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: poi-svc
+  namespace: team7
 spec:
   selector:
     app: poi
