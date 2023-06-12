@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: poi
-        image: registryapf4650.azurecr.io/trips:latest
+        image: registryapf4650.azurecr.io/poi:latest
         ports:
         - containerPort: 80
         env:
