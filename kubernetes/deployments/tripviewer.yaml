@@ -18,7 +18,7 @@ spec:
         image: registryapf4650.azurecr.io/tripviewer:latest
         ports:
         - containerPort: 80
-         env:
+        env:
           - name: USERPROFILE_API_ENDPOINT
             value: userprofile-svc.svc.cluster.local:80
           - name: TRIPS_API_ENDPOINT

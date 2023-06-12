@@ -40,4 +40,4 @@ spec:
                 name: my-secret
                 key: SQL_DBNAME
           - name: DEBUG_LOGGING
-            value: false
+            value: "false"
