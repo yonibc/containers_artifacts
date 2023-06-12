@@ -29,14 +29,3 @@ spec:
               secretKeyRef:
                 name: my-secret
                 key: BING_MAPS_KEY
-kind: Service
-metadata:
-  name: my-app-service
-spec:
-  type: LoadBalancer
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  selector:
-    app: my-app
