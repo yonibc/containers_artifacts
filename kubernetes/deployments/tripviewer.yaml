@@ -20,9 +20,9 @@ spec:
         - containerPort: 80
         env:
           - name: USERPROFILE_API_ENDPOINT
-            value: userprofile-svc.svc.cluster.local:80
+            value: userprofile-svc.team7.svc.cluster.local:80
           - name: TRIPS_API_ENDPOINT
-            value: trips-svc.svc.cluster.local:80
+            value: trips-svc.team7.svc.cluster.local:80
           # - name: BING_MAPS_KEY
           #   valueFrom:
           #     secretKeyRef:
