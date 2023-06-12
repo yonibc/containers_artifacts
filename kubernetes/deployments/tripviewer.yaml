@@ -23,8 +23,8 @@ spec:
             value: userprofile-svc.svc.cluster.local:80
           - name: TRIPS_API_ENDPOINT
             value: trips-svc.svc.cluster.local:80
-          - name: BING_MAPS_KEY
-            valueFrom:
-              secretKeyRef:
-                name: my-secret
-                key: BING_MAPS_KEY
+          # - name: BING_MAPS_KEY
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: my-secret
+          #       key: BING_MAPS_KEY

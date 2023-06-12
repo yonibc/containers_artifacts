@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: userjava
-        image: registryapf4650.azurecr.io/userjava:latest
+        image: registryapf4650.azurecr.io/user-java:latest
         ports:
         - containerPort: 80
         env:
