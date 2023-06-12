@@ -13,7 +13,7 @@ spec:
         app: trips
     spec:
       containers:
-      - name: trips-container
+      - name: trips
         image: trips-image:latest
         ports:
         - containerPort: 80
