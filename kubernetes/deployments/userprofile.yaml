@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: userprofile-container
-        image: userprofile-image:latest
+        image: registryapf4650.azurecr.io/userprofile:latest
         ports:
         - containerPort: 80
         env:
