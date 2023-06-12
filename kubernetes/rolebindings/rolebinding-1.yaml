@@ -4,8 +4,8 @@ metadata:
   name: web-view-rolebinding
   namespace: web
 subjects:
-- kind: User
-  name: api-dev
+- kind: Group
+  name: api-dev-group
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
@@ -18,8 +18,8 @@ metadata:
   name: api-edit-rolebinding
   namespace: api
 subjects:
-- kind: User
-  name: api-dev
+- kind: Group
+  name: api-dev-group
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
