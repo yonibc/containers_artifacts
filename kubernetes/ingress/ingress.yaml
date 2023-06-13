@@ -14,39 +14,34 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: tripviewer-svc
+            name: tripviewer-svc-bridge
             port:
               number: 80
-            namespace: web
       - path: /api/poi
         pathType: Prefix
         backend:
           service:
-            name: poi-svc
+            name: poi-svc-bridge
             port:
               number: 80
-            namespace: api
       - path: /api/trips
         pathType: Prefix
         backend:
           service:
-            name: trips-svc
+            name: trips-svc-bridge
             port:
               number: 80
-            namespace: api
       - path: /api/user
         pathType: Prefix
         backend:
           service:
-            name: userprofile-svc
+            name: userprofile-svc-bridge
             port:
               number: 80
-            namespace: api
       - path: /api/user-java
         pathType: Prefix
         backend:
           service:
-            name: userjava-svc
+            name: userjava-svc-bridge
             port:
               number: 80
-            namespace: api
