@@ -5,7 +5,7 @@ metadata:
   namespace: web
 spec:
   type: ExternalName
-  externalName: trips-svc.api
+  externalName: trips-svc.api.svc.cluster.local
 
 ---
 
@@ -16,7 +16,7 @@ metadata:
   namespace: web
 spec:
   type: ExternalName
-  externalName: userjava-svc.api
+  externalName: userjava-svc.api.svc.cluster.local
 
 ---
 
@@ -27,7 +27,7 @@ metadata:
   namespace: web
 spec:
   type: ExternalName
-  externalName: userprofile-svc.api
+  externalName: userprofile-svc.api.svc.cluster.local
 
 ---
 
@@ -38,4 +38,4 @@ metadata:
   namespace: web
 spec:
   type: ExternalName
-  externalName: poi-svc.api
+  externalName: poi-svc.api.svc.cluster.local
