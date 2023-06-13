@@ -16,19 +16,13 @@ spec:
       containers:
       - name: userprofile
         image: registryapf4650.azurecr.io/userprofile:latest
+        volumeMounts:
+        - name: secrets-volume
+          mountPath: "/secrets"
+          readOnly: true
         ports:
         - containerPort: 80
         env:
-          - name: SQL_USER
-            valueFrom:
-              secretKeyRef:
-                name: my-secret
-                key: SQL_USER
-          - name: SQL_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: my-secret
-                key: SQL_PASSWORD
           - name: SQL_SERVER
             valueFrom:
               secretKeyRef:
@@ -39,3 +33,10 @@ spec:
               secretKeyRef:
                 name: my-secret
                 key: SQL_DBNAME
+      volumes:
+      - name: secrets-volume
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: "azure-kvname-user-msi"
