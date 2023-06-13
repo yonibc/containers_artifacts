@@ -24,7 +24,7 @@ spec:
             name: trips-svc
             port:
               number: 80
-      - path: /api/user-java/healthcheck
+      - path: /api/user-java
         pathType: Prefix
         backend:
           service:
