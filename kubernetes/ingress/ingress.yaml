@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: trips-viewer-ingress
-  namespace: web
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -14,34 +13,39 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: tripviewer-svc.web.svc.cluster.local
+            name: tripviewer-svc
             port:
               number: 80
+            namespace: web
       - path: /api/poi
         pathType: Prefix
         backend:
           service:
-            name: poi-svc.api.svc.cluster.local
+            name: poi-svc
             port:
               number: 80
+            namespace: api
       - path: /api/trips
         pathType: Prefix
         backend:
           service:
-            name: trips-svc.api.svc.cluster.local
+            name: trips-svc
             port:
               number: 80
+            namespace: api
       - path: /api/user
         pathType: Prefix
         backend:
           service:
-            name: userprofile-svc.api.svc.cluster.local
+            name: userprofile-svc
             port:
               number: 80
+            namespace: api
       - path: /api/user-java
         pathType: Prefix
         backend:
           service:
-            name: userjava-svc.api.svc.cluster.local
+            name: userjava-svc
             port:
               number: 80
+            namespace: api
