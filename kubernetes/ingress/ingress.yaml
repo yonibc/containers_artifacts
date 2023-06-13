@@ -16,31 +16,31 @@ spec:
             name: tripviewer-svc.web.svc.cluster.local
             port:
               number: 80
-      - path: /trips
+      - path: /api/poi
         pathType: Prefix
         backend:
           service:
-            name: tripviewer-svc.web.svc.cluster.local
+            name: poi-svc.web.svc.cluster.local
             port:
               number: 80
-      - path: /
+      - path: /api/trips
         pathType: Prefix
         backend:
           service:
-            name: tripviewer-svc.web.svc.cluster.local
+            name: trips-svc.web.svc.cluster.local
             port:
               number: 80
-      - path: /
+      - path: /api/user
         pathType: Prefix
         backend:
           service:
-            name: tripviewer-svc.web.svc.cluster.local
+            name: userprofile-svc.web.svc.cluster.local
             port:
               number: 80
-      - path: /
+      - path: /api/user-java
         pathType: Prefix
         backend:
           service:
-            name: tripviewer-svc.web.svc.cluster.local
+            name: userjava-svc.web.svc.cluster.local
             port:
               number: 80
