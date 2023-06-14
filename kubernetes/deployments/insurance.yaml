@@ -18,6 +18,13 @@ spec:
         - image: "registryapf4650.azurecr.io/insurance:1.0"
           imagePullPolicy: Always
           name: insurance
+          resources:
+            limits:
+              cpu: "2"
+              memory: 4096Mi
+            requests:
+              cpu: "2"
+              memory: 4096Mi
           ports:
             - containerPort: 8081
               name: http
